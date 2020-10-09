@@ -1,0 +1,58 @@
+<!-- ComS 319 G47 Project: Inventory Manager -->
+
+<html>
+
+<head>
+<meta charset = "utf-8"/>
+<style>
+.errorMessage{color: red;}
+</style>
+<script src="../javascript/<insert_js_name_here>.js"></script>
+</head>
+
+<body>
+<h1>Inventory Manager Login</h1>
+
+  <form id="user information" action="" >
+    <fieldset>
+      <legend>User Information</legend>
+      <p id="First">
+        <label for="first">First name</label>
+        <input id="first" name="first" type="text" required />
+
+      </p>
+	  <p id="Last">
+        <label for="last">Last name</label>
+        <input id="last" name="last" type="text" required />
+
+      </p>
+	  <p id="Gender">
+        <label for="gender">Gender</label>
+		<select id="gender" name="gender" required >
+		  <option value="male">male</option>
+		  <option value="female">female</option>
+		</select>
+		
+      </p>
+	  <p id="State">
+        <label for="state">State</label>
+		<select id="state" name="state" required >
+		  <option value="California">California</option>
+		  <option value="Florida">Florida</option>
+		  <option value="New York">New York</option>
+		  <option value="Texas">Texas</option>
+		  <option value="Hawaii">Hawaii</option>
+		  <option value="Washington">Washington</option>
+		  <option value="Colorado">Colorado</option>
+		  <option value="Virginia">Virginia</option>
+		  <option value="Iowa">Iowa</option>
+		  <option value="Arizona">Arizona</option>
+		</select>
+		
+      </p>
+        <input onCLick="validate1()" type="button" id="continue" name="continue" value="Continue"/>
+    </fieldset>
+  </form>
+</body>
+
+</html>
