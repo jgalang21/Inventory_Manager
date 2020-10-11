@@ -1,60 +1,113 @@
 <!-- ComS 319 G47 Project: Inventory Manager -->
 
+<!-- Navigation bar from: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+
 <html>
 
 <head>
 <meta charset = "utf-8"/>
 <style>
 .errorMessage{color: red;}
+
+.container {
+	  position: relative;
+	  border-radius: 5px;
+	  background-color: #97ebdb;
+	  padding: 20px 0 30px 0;
+	  text-align: relative;
+	   font-family: "Times New Roman", Times, serif;
+	  
+	}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #005582; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+h1 {
+    font-family: 'Alatsi';font-size: 30px;
+   	text-align:center;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
 </style>
-<script src="../javascript/<insert_js_name_here>.js"></script>
+<script src="../javascript/drawer.js"></script>
 </head>
 
-<body>
+<body class="container">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Warehouse</a>
+  <a href="#">Finances</a>
+  <a href="#">My Orders</a>
+  <a href="#">Contact</a>
+</div>
+
+
+
+<!-- Use any element to open the sidenav -->
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+
+
 <h1>
-Validation Form
-</h1>
+		Welcome user! Let's get to work.
 
-  <form id="user information" action="" >
-    <fieldset>
-      <legend>User Information</legend>
-      <p id="First">
-        <label for="first">First name</label>
-        <input id="first" name="first" type="text" required />
+	</h1>
 
-      </p>
-	  <p id="Last">
-        <label for="last">Last name</label>
-        <input id="last" name="last" type="text" required />
 
-      </p>
-	  <p id="Gender">
-        <label for="gender">Gender</label>
-		<select id="gender" name="gender" required >
-		  <option value="male">male</option>
-		  <option value="female">female</option>
-		</select>
-		
-      </p>
-	  <p id="State">
-        <label for="state">State</label>
-		<select id="state" name="state" required >
-		  <option value="California">California</option>
-		  <option value="Florida">Florida</option>
-		  <option value="New York">New York</option>
-		  <option value="Texas">Texas</option>
-		  <option value="Hawaii">Hawaii</option>
-		  <option value="Washington">Washington</option>
-		  <option value="Colorado">Colorado</option>
-		  <option value="Virginia">Virginia</option>
-		  <option value="Iowa">Iowa</option>
-		  <option value="Arizona">Arizona</option>
-		</select>
-		
-      </p>
-        <input onCLick="validate1()" type="button" id="continue" name="continue" value="Continue"/>
-    </fieldset>
-  </form>
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+
+</div>
 </body>
 
 </html>

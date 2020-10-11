@@ -4,55 +4,95 @@
 
 <head>
 <meta charset = "utf-8"/>
+
+<!-- Some CSS Below -->
 <style>
 .errorMessage{color: red;}
+
+	fieldset {
+ 	 background-color: #daf8e4;
+	}
+
+	button {
+ 	 background-color: #daf8e4;
+ 	  width: 10%;
+	  background-color: #FFFFFF;
+	  padding: 5px;
+	  border: none;
+	  border-radius: 4px;
+	  margin: 5px 0;
+	  opacity: 0.85;
+	  display: inline-block;
+	  font-size: 17px;
+	  line-height: 20px;
+	  text-decoration: none; /* remove underline from anchors */
+	   text-align: center;  
+	   
+	}
+
+	.container {
+	  position: relative;
+	  border-radius: 5px;
+	  background-color: #97ebdb;
+	  padding: 20px 0 30px 0;
+	  text-align: center;
+	   font-family: "Times New Roman", Times, serif;
+	  
+	}
+
+	
+
+	input, 
+	.btn {
+	  width: 10%;
+	  background-color: #FFFFFF;
+	  padding: 5px;
+	  border: none;
+	  border-radius: 4px;
+	  margin: 5px 0;
+	  opacity: 0.85;
+	  display: inline-block;
+	  font-size: 17px;
+	  line-height: 20px;
+	  text-decoration: none; /* remove underline from anchors */
+	   text-align: center;  
+	}
+
+
+
 </style>
-<script src="../javascript/<insert_js_name_here>.js"></script>
+<script src="../javascript/VerifyLogin.js"></script>
+
+
 </head>
 
-<body>
-<h1>Inventory Manager Login</h1>
+	<body class = "container">
+	<h1>Inventory Manager Login</h1>
+	<p2> Your inventory, simplified.</p2>
 
-  <form id="user information" action="" >
-    <fieldset>
-      <legend>User Information</legend>
-      <p id="First">
-        <label for="first">First name</label>
-        <input id="first" name="first" type="text" required />
+	<p></p>
 
-      </p>
-	  <p id="Last">
-        <label for="last">Last name</label>
-        <input id="last" name="last" type="text" required />
 
-      </p>
-	  <p id="Gender">
-        <label for="gender">Gender</label>
-		<select id="gender" name="gender" required >
-		  <option value="male">male</option>
-		  <option value="female">female</option>
-		</select>
-		
-      </p>
-	  <p id="State">
-        <label for="state">State</label>
-		<select id="state" name="state" required >
-		  <option value="California">California</option>
-		  <option value="Florida">Florida</option>
-		  <option value="New York">New York</option>
-		  <option value="Texas">Texas</option>
-		  <option value="Hawaii">Hawaii</option>
-		  <option value="Washington">Washington</option>
-		  <option value="Colorado">Colorado</option>
-		  <option value="Virginia">Virginia</option>
-		  <option value="Iowa">Iowa</option>
-		  <option value="Arizona">Arizona</option>
-		</select>
-		
-      </p>
-        <input onCLick="validate1()" type="button" id="continue" name="continue" value="Continue"/>
-    </fieldset>
-  </form>
+	  <form id="user information" action="" >
+	    <fieldset>
+	      <legend>Login</legend>
+	      <p id="First">
+	        <label for="first">Username: </label>
+	        <input id="first" name="first" type="text" required />
+
+	      </p>
+		  <p id="Last">
+	        <label for="last">Password: </label>
+	        <input id="last" name="last" type="text" required />
+
+	     
+		  	<p>
+		  	</p>
+	        <button onCLick="redirect()" type="button" id="continue" name="continue" value="Continue"/>
+	        Login
+	    </button>
+	    </fieldset>
+	  </form>
 </body>
 
 </html>
