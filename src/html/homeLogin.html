@@ -26,8 +26,8 @@
 	  font-size: 17px;
 	  line-height: 20px;
 	  text-decoration: none; /* remove underline from anchors */
-	   text-align: center;  
-	   
+	   text-align: center;
+
 	}
 
 	.container {
@@ -36,13 +36,11 @@
 	  background-color: #97ebdb;
 	  padding: 20px 0 30px 0;
 	  text-align: center;
-	   font-family: "Times New Roman", Times, serif;
-	  
+	   font-family: "Arial", Times, serif;
+
 	}
 
-	
-
-	input, 
+	input,
 	.btn {
 	  width: 10%;
 	  background-color: #FFFFFF;
@@ -55,7 +53,7 @@
 	  font-size: 17px;
 	  line-height: 20px;
 	  text-decoration: none; /* remove underline from anchors */
-	   text-align: center;  
+	   text-align: center;
 	}
 
 
@@ -67,31 +65,32 @@
 </head>
 
 	<body class = "container">
-	<h1>Inventory Manager Login</h1>
+	<h1>Inventory Manager</h1>
 	<p2> Your inventory, simplified.</p2>
 
 	<p></p>
+	<img src="../images/Montacargas.png" alt="Forklift" width=300 height=200>
 
 
 	  <form id="user information" action="" >
-	    <fieldset>
-	      <legend>Login</legend>
+
+	      <h1>Sign in</h1>
 	      <p id="First">
 	        <label for="first">Username: </label>
 	        <input id="first" name="first" type="text" required />
 
 	      </p>
 		  <p id="Last">
-	        <label for="last">Password: </label>
-	        <input id="last" name="last" type="text" required />
+	        <label for="pass">Password: </label>
+	        <input id="pass" name="pass" type="password" required />
 
-	     
+
 		  	<p>
 		  	</p>
-	        <button onCLick="redirect()" type="button" id="continue" name="continue" value="Continue"/>
+	        <button onCLick="verify()" type="button" id="continue" name="continue" value="Continue"/>
 	        Login
 	    </button>
-	    </fieldset>
+
 	  </form>
 </body>
 
