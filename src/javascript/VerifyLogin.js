@@ -13,9 +13,10 @@ function verify(){
   var mysql = require('mysql');
 
   var con = mysql.createConnection({
-    host: "coms-319-047.cs.iastate.edu",
-    user: "root",
-    password: "comsVM@319"
+    host: 'coms-319-047.cs.iastate.edu',
+    user: 'root',
+    password: 'comsVM@319',
+    database: 'project'
   });
 
   con.connect(function(err) {

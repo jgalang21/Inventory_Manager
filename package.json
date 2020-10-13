@@ -1,0 +1,15 @@
+{
+  "name": "g47",
+  "version": "1.0.0",
+  "description": "Simply navigate to /src/html/ and open the homeLogin.html file using a browser!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.linux.iastate.edu/fall2020-cs319-gitprojects/g47.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
