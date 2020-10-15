@@ -1,15 +1,17 @@
+@import "colorPalette.css";
+
 .errorMessage {
-    color: red;
+    color: var(--error-color);
 }
 
 fieldset {
-    background-color: #daf8e4;
+    background-color: var(--login-bg-color);
 }
 
 button {
-    background-color: #daf8e4;
+    background-color: var(--login-bg-color);
     width: 10%;
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     padding: 5px;
     border: none;
     border-radius: 4px;
@@ -26,7 +28,7 @@ button {
 .container {
     position: relative;
     border-radius: 5px;
-    background-color: #97ebdb;
+    background-color: var(--main-bg-color);
     padding: 20px 0 30px 0;
     text-align: center;
     font-family: "Arial", Times, serif;
@@ -36,7 +38,7 @@ button {
 input,
 .btn {
     width: 10%;
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     padding: 5px;
     border: none;
     border-radius: 4px;
