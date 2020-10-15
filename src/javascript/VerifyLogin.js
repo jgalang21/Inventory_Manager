@@ -8,20 +8,28 @@ function redirect(){
 
 }
 
-function verify(){
+// function verify(){
+//   var x = document.getElementById('first').value;
+//   console.log(x);
 
-  var mysql = require('mysql');
+//   var mysql = require('mysql');
 
-  var con = mysql.createConnection({
-    host: 'coms-319-047.cs.iastate.edu',
-    user: 'root',
-    password: 'comsVM@319',
-    database: 'project'
-  });
+//   var con = mysql.createConnection({
+//     host: 'coms-319-047.cs.iastate.edu',
+//     user: 'team47',
+//     password: 'team47comsVM@319',
+//     database: 'MyProject',
+    
+//   });
 
-  con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-  });
+//   con.connect(function(err){
+//     if(!err) {
+//         console.log("Database is connected ... ");
+//     } else {
+//         console.log("Error connecting database ... ");
+//     }
+//   });
 
-}
+// }
+
+// verify();

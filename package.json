@@ -11,5 +11,8 @@
     "url": "https://git.linux.iastate.edu/fall2020-cs319-gitprojects/g47.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
