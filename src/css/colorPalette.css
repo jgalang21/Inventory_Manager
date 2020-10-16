@@ -1,9 +1,13 @@
 :root {
     --login-bg-color: #daf8e4;
     --main-bg-color: #97ebdb;
+    --mainFaded-bg-color: rgba(0,0,0,0.4); /* add opacity */
+    --table-bg-color: #00c2c7;
+    --tHeader-bg-color: #0086ad;
     --nav-bg-color: #005582;
     --nav-txt-color: #161515;
     --nav-txt-hover-color: #f1f1f1;
     --error-color: red;
     --white-color: white;
+    --black-color: black;
   }
