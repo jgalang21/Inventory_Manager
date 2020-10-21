@@ -1,5 +1,5 @@
 class product {
-    constructor(productName, quantity, costPerItem, weightPerItem, 
+    constructor(productName, quantity, costPerItem, weightPerItem,
         productType, brand, productID, location) {
             this.productName = productName;
             this.quantity = quantity;
@@ -29,9 +29,57 @@ class product {
                 return this.productID;
             case 7 :
                 return this.location;
-            
+
         }
     }
+}
+
+function checkIfEmpty() {
+    var isEmpty = false,
+
+    name = document.getElementById("popupPrdName").value,
+    quantity = document.getElementById("popupQuantity").value,
+    cost = document.getElementById("popupCostPerItem").value,
+    weight = document.getElementById("popupWeightPerItem").value,
+    type = document.getElementById("popupProductType").value,
+    brand = document.getElementById("popupBrand").value,
+    id = document.getElementById("popupProductID").value,
+    location = document.getElementById("popupLocation").value;
+
+    if(name == ""){
+      alert("Name of the item can not be empty");
+      isEmpty = true;
+    }
+    else if(quantity == ""){
+      alert("Quantity of the item can not be empty")
+      isEmpty = true;
+    }
+    else if(cost == ""){
+      alert("Cost of the item can not be empty")
+      isEmpty = true;
+    }
+    else if(weight == ""){
+      alert("Weight of the item can not be empty")
+      isEmpty = true;
+    }
+    else if(type == ""){
+      alert("Type of the item can not be empty")
+      isEmpty = true;
+    }
+    else if(brand == ""){
+      alert("Brand of the item can not be empty")
+      isEmpty = true;
+    }
+    else if(id == ""){
+      alert("Id of the item can not be empty")
+      isEmpty = true;
+    }
+    else if(location == ""){
+      alert("Location of the item can not be empty")
+      isEmpty = true;
+    }
+    return isEmpty;
+
 }
 
 function addProductWindow() {
@@ -39,19 +87,27 @@ function addProductWindow() {
     var popup = document.getElementById("myAddProductPopup");
     popup.style.display = "block";
 
-    /* trying to add functionality for adding items
-    var popupPrdInfo = document.getElementsByClassName("prodInfo")[0];
-    popupPrdInfo.onchange = function() {
-
-    }*/
-
     var newProduct = new product(1, 1, 1, 1, 1, 1, 1, 1);
 
     var addProdPopupBtn = document.getElementsByClassName("popupBtn")[0];
     addProdPopupBtn.onclick = function() {
+
+
+      newProduct.productName = document.getElementById("popupPrdName").value;
+      newProduct.quantity = document.getElementById("popupQuantity").value;
+      newProduct.costPerItem = document.getElementById("popupCostPerItem").value;
+      newProduct.weightPerItem = document.getElementById("popupWeightPerItem").value;
+      newProduct.productType = document.getElementById("popupProductType").value;
+      newProduct.brand = document.getElementById("popupBrand").value;
+      newProduct.productID = document.getElementById("popupProductID").value;
+      newProduct.location = document.getElementById("popupLocation").value;
+
+      if(!checkIfEmpty()) {
         addRow(newProduct);
+
+      }
     }
-    
+
     // Get the <span> element that closes the popup
     var spanClose = document.getElementsByClassName("close")[0];
 
