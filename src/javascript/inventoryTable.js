@@ -106,6 +106,17 @@ function addProductWindow() {
         addRow(newProduct);
 
       }
+
+      //this just simply clears the field after every item is added, just for making things clear
+      document.getElementById("popupPrdName").value = '';
+      document.getElementById("popupQuantity").value ='';
+      document.getElementById("popupCostPerItem").value = '';
+      document.getElementById("popupWeightPerItem").value = '';
+      document.getElementById("popupProductType").value = '';
+      document.getElementById("popupBrand").value = '';
+      document.getElementById("popupProductID").value = '';
+      document.getElementById("popupLocation").value = '';
+
     }
 
     // Get the <span> element that closes the popup
