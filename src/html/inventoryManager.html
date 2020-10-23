@@ -37,7 +37,7 @@
         <input type="button" id="addProductBtn" value="Add Product" onclick="addProductWindow()">
       </div>
       <div id="singleTableBtn">
-        <input type="button" id="removeProductBtn" value="Remove Product" onclick="removeRow()">
+        <input type="button" id="removeProductBtn" value="Remove Product" onclick="rmvProductWindow()">
       </div>
     </div>
     <table id="myInventoryTable" class="inventoryTable">
@@ -59,12 +59,12 @@
   </div>
 
   <!-- The Add Product Popup -->
-  <div id="myAddProductPopup" class="addProductPopup">
+  <div id="myAddProductPopup" class="inventoryPopup">
     <div class="popup-content">
       <span class="close">&times;</span>
       <h1>Add a Product</h1>
 
-      <div>Enter Product Name:    <input type="text" class="prodInfo" id="popupPrdName" ></div>
+      <div>Enter Product Name:    <input type="text" class="prodInfo" id="addPopPrdName" ></div>
       <div>Enter Quantity:        <input type="text" class="prodInfo" id="popupQuantity" ></div>
       <div>Enter Cost Per Item: ($)   <input type="text" class="prodInfo" id="popupCostPerItem" ></div>
       <div>Enter Weight Per Item: (lb) <input type="text" class="prodInfo" id="popupWeightPerItem" ></div>
@@ -73,6 +73,16 @@
       <div>Enter Product ID:      <input type="text" class="prodInfo" id="popupProductID" ></div>
       <div>Enter Location:        <input type="text" class="prodInfo" id="popupLocation" ></div>
       <input type="button" id="addProdPopupBtn" class="popupBtn" value="Add Product">
+    </div>
+  </div>
+
+  <!-- The Remove Product Popup -->
+  <div id="myRmvProductPopup" class="inventoryPopup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h1>Remove a Product</h1>
+      <div>Enter Product Name to Remove: <input type="text" class="prodInfo" id="rmvPopPrdName" ></div>
+      <input type="button" id="rmvProdPopupBtn" class="popupBtn" value="Remove Product">
     </div>
   </div>
 
