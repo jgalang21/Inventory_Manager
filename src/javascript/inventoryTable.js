@@ -178,3 +178,68 @@ function removeRow(prod) {
     }
     
 }
+
+function sortInventory(n, isNum) {
+  var rows, switching, i, comp1, comp2, shouldSwitch, dir, switchcount = 0;
+  var inventoryTable = document.getElementById('myInventoryTable').getElementsByTagName('tbody')[0];
+  switching = true;
+  //sorting direction: ascending
+  dir = "asc"; 
+  
+  while (switching) {
+    switching = false;
+    rows = inventoryTable.rows;
+    //Loop through all inventory rows
+    for (i = 0; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      //Get elements to compare: current row the next
+      comp1 = rows[i].getElementsByTagName("td")[n];
+      comp2 = rows[i + 1].getElementsByTagName("td")[n];
+      
+      /*if column is number based get numbers
+      * then check if the two rows should switch places,
+      * based on the direction
+      * */
+      if(isNum) {
+        if (dir == "asc") {
+          if (Number(comp1.innerText.toLowerCase()) > Number(comp2.innerText.toLowerCase())) {
+            shouldSwitch = true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (Number(comp1.innerText.toLowerCase()) < Number(comp2.innerText.toLowerCase())) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      else {
+        if (dir == "asc") {
+          if (comp1.innerText.toLowerCase() > comp2.innerText.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (comp1.innerText.toLowerCase() < comp2.innerText.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+    }
+    if (shouldSwitch) {
+      //Switch rows
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}

@@ -43,14 +43,14 @@
     <table id="myInventoryTable" class="inventoryTable">
       <thead>
         <tr>
-          <th>Product Name</th>
-          <th>Quantity</th>
-          <th>Cost Per Item</th>
-          <th>Weight Per Item</th>
-          <th>Product Type</th>
-          <th>Brand</th>
-          <th>Product ID</th>
-          <th>Location</th>
+          <th onclick="sortInventory(0, false)">Product Name</th>
+          <th onclick="sortInventory(1, true)">Quantity</th>
+          <th onclick="sortInventory(2, true)">Cost Per Item</th>
+          <th onclick="sortInventory(3, true)">Weight Per Item</th>
+          <th onclick="sortInventory(4, false)">Product Type</th>
+          <th onclick="sortInventory(5, false)">Brand</th>
+          <th onclick="sortInventory(6, true)">Product ID</th>
+          <th onclick="sortInventory(7, false)">Location</th>
         </tr>
       </thead>
       <tbody>
@@ -71,15 +71,15 @@
         </div>
         <div class="prodInfo">
           <div>Quantity</div>
-          <input type="text" class="prodInfoInput" id="popupQuantity" >
+          <input type="number" class="prodInfoInput" id="popupQuantity" >
         </div> 
         <div class="prodInfo">
           <div>Cost Per Item ($)</div>
-          <input type="text" class="prodInfoInput" id="popupCostPerItem" >
+          <input type="number" class="prodInfoInput" id="popupCostPerItem" >
         </div>
         <div class="prodInfo">
           <div>Weight Per Item (lb)</div>
-          <input type="text" class="prodInfoInput" id="popupWeightPerItem" >
+          <input type="number" class="prodInfoInput" id="popupWeightPerItem" >
         </div>
         <div class="prodInfo">
           <div>Product Type</div>
@@ -91,7 +91,7 @@
         </div>
         <div class="prodInfo">
           <div>Product ID</div>
-          <input type="text" class="prodInfoInput" id="popupProductID" >
+          <input type="number" class="prodInfoInput" id="popupProductID" >
         </div>
         <div class="prodInfo">
           <div>Location</div>

@@ -24,8 +24,13 @@
   border: 1px solid var(--black-color);
 }
 
+#myInventoryTable th {
+  cursor: pointer;
+}
+
 #myInventoryTable td, th {
   border: 1px solid var(--black-color);
+  width: 12.5%;
 }
 
 #tableBtns {
