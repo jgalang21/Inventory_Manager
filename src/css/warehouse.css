@@ -79,6 +79,21 @@
   cursor: pointer;
 }
 
+
+
+.test a {
+    margin-left: 230px; 
+    float: left;
+    text-align: center;
+    overflow: auto; 
+}
+
+.test a img {
+    width: 200px;
+    border:2px solid white; 
+    border-radius: 50%; 
+}
+
 /* Add Product Popup (background) */
 .addProductPopup {
   display: none; /* Hidden by default */
