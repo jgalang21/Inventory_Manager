@@ -82,7 +82,7 @@
 
 
 .test a {
-    margin-left: 230px; 
+    width: 33.3333%;
     float: left;
     text-align: center;
     overflow: auto; 
