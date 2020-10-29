@@ -1,3 +1,5 @@
+
+
 class product {
     constructor(productName, quantity, costPerItem, weightPerItem,
         productType, brand, productID, location) {
@@ -84,8 +86,13 @@ function checkIfEmpty() {
 
 function addProductWindow() {
     // Get the popup
+
+    
+
     var popup = document.getElementById("myAddProductPopup");
     popup.style.display = "block";
+
+
 
     var newProduct = new product(1, 1, 1, 1, 1, 1, 1, 1);
 
@@ -101,6 +108,13 @@ function addProductWindow() {
       newProduct.productID = document.getElementById("popupProductID").value;
       newProduct.location = document.getElementById("popupLocation").value;
 
+
+
+      axios.post("http://localhost:8080/addProduct",
+        newProduct
+      ).then(console.log('mvp')).catch(error => console.error(error));
+
+
       if(!checkIfEmpty()) {
         addRow(newProduct);
         //this just simply clears the field after every item is added, just for making things clear
@@ -114,7 +128,7 @@ function addProductWindow() {
         document.getElementById("popupLocation").value = '';
       }
     }
-
+    
     // Get the <span> element that closes the popup
     var spanClose = popup.getElementsByClassName("close")[0];
 
