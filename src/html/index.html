@@ -9,31 +9,27 @@
 </head>
 
 	<body class = "container">
-	<h1>Inventory Manager</h1>
-	<p2> Your inventory, simplified.</p2>
+	<h1>Cy-ventory</h1>
+	<p2> Your Cyclone Inventory, simplified.</p2>
 
 	<p></p>
 	<img src="../images/Montacargas.png" alt="Forklift" width=300 height=200>
 
-
 	  <form id="user information" action="" >
+		<h1>Sign in</h1>
+		<p id="First">
+		<label for="first">Username: </label>
+		<input id="first" name="first" type="text" required />
 
-	      <h1>Sign in</h1>
-	      <p id="First">
-	        <label for="first">Username: </label>
-	        <input id="first" name="first" type="text" required />
+		</p>
+		<p id="Last">
+		<label for="pass">Password: </label>
+		<input id="pass" name="pass" type="password" required />
 
-	      </p>
-		  <p id="Last">
-	        <label for="pass">Password: </label>
-	        <input id="pass" name="pass" type="password" required />
-
-
-		  	<p>
-		  	</p>
-		  	<!-- change the onclick from verify() to redirect() if you want to login w/out credentials -->
-	        <button onCLick="redirect()" type="button" id="continue" name="continue" value="Continue"/>
-	        Login
+		<p>	</p>
+		<!-- change the onclick from verify() to redirect() if you want to login w/out credentials -->
+		<button onCLick="redirect()" type="button" id="continue" name="continue" value="Continue"/>
+		Login
 	    </button>
 
 	  </form>

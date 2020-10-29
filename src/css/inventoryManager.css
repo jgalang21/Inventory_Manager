@@ -74,7 +74,26 @@
   margin: auto;
   padding: 20px;
   border: 1px solid var(--black-color);
-  width: 40%;
+  width: 15%;
+}
+
+.popup-content .prodInfoInput {
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.popup-content .popupProd {
+  padding: 0px 55px;
+}
+
+.popup-content .prodInfo {
+  text-align: left;
+}
+
+.popup-content .popupBtn {
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* The Close Button */
