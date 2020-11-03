@@ -27,6 +27,15 @@ app.get('/', function(request, response) {
 
  app.post('/addProduct', function(request, response){
 
+   var connection = mysql.createConnection({
+      host: 'coms-319-047.cs.iastate.edu',
+       user: 'team47',
+       password: 'team47comsVM@319',
+      database: 'project',
+      
+   });
+   
+
     const product = request.body;
     console.log(product);
     console.log(product.productName);
@@ -43,6 +52,7 @@ app.get('/', function(request, response) {
          console.log("1 record inserted");
   });
     });
+    
 
 
  });
