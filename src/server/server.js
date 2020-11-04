@@ -17,6 +17,35 @@ app.get('/', function(request, response) {
     response.status(200).json({"message": "working"})
  });
 
+ app.get('/getProducts', function(request, response) {
+
+  
+   var connection = mysql.createConnection({
+      host: 'coms-319-047.cs.iastate.edu',
+       user: 'team47',
+       password: 'team47comsVM@319',
+      database: 'project',
+      
+   });
+   
+    const product = request.body;
+    console.log(product);
+
+    connection.connect(function(err) {
+      if (err) throw err;
+      connection.query("SELECT * FROM products", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+        response.status(200).json({"data": result});
+        
+      });
+   });
+   
+
+
+});
+
+
  app.post('/addProduct', function(request, response){
 
    var connection = mysql.createConnection({
@@ -42,8 +71,8 @@ app.get('/', function(request, response) {
       product.brand, product.productID, product.location], function (err, result) {
          if (err) throw err;
          console.log("Record inserted successfully!");
-  });
-    });
+      });
+   });
     
 
 

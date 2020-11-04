@@ -1,5 +1,6 @@
 
 
+
 class product {
     constructor(productName, quantity, costPerItem, weightPerItem,
         productType, brand, productID, location) {
@@ -112,7 +113,16 @@ function addProductWindow() {
 
       axios.post("http://localhost:8080/addProduct",
         newProduct
-      ).then(console.log('mvp')).catch(error => console.error(error));
+      ).then(console.log('Product added')).catch(error => console.error(error));
+
+
+    // HERE IS THE "GET REQUEST", if you uncomment this, you will get a listing of all the products
+    // in the database AFTER you add an item in the CHROME browser console,
+    // i just put it here for testing but put it where you see appropriate
+    //   axios.get("http://localhost:8080/getProducts")
+    //   .then(resp => {
+    //     console.log(resp.data);
+    // }).catch(error => console.error(error));
 
 
       if(!checkIfEmpty()) {
