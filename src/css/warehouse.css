@@ -36,66 +36,30 @@
   transition: margin-left .5s;
 }
 
-#myInventoryTable {
-  width: inherit;
-  background-color: var(--table-bg-color);
-  border: 1px solid var(--black-color);
-  border-collapse: collapse;
-  font-family: 'Alatsi';
-}
-
-#myInventoryTable thead {
-  background-color: var(--tHeader-bg-color);
-  border: 1px solid var(--black-color);
-}
-
-#myInventoryTable td, th {
-  border: 1px solid var(--black-color);
-}
-
-#tableBtns {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#singleTableBtn {
-  display: inline-block;
-}
-
-#addProductBtn {
-  background-color: var(--login-bg-color);
-  width: 150px;
-  height: 35px;
-  font-family: 'Alatsi';
-  cursor: pointer;
-}
-
-#removeProductBtn {
-  background-color: var(--login-bg-color);
-  width: 150px;
-  height: 35px;
-  font-family: 'Alatsi';
-  cursor: pointer;
-}
-
-
-
-.test a {
+.myWareHouse .evenSpace {
     width: 33.3333%;
     float: left;
     text-align: center;
     overflow: auto; 
 }
 
-.test a img {
+.myWareHouse img {
     width: 200px;
     border:2px solid white; 
     border-radius: 50%; 
 }
 
+.warehouseFunction {
+  cursor: pointer;
+  border: 2px solid var(--black-color);
+  width: fit-content;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Add Product Popup (background) */
-.addProductPopup {
+.placeOrderPopup {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -110,11 +74,11 @@
 
 /* Popup Content */
 .popup-content {
-  background-color: var(--main-bg-color);
+  background-color: var(--popup-bg-color);
   margin: auto;
   padding: 20px;
   border: 1px solid var(--black-color);
-  width: 40%;
+  width: 30%;
 }
 
 /* The Close Button */
