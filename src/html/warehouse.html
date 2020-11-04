@@ -5,10 +5,10 @@
 <html>
 
 <head>
-  <meta charset = "utf-8"/>
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="../css/warehouse.css">
   <script src="../javascript/drawer.js"></script>
-  <script src="../javascript/inventoryTable.js"></script>
+  <script src="../javascript/warehouse.js"></script>
 </head>
 
 <body class="container">
@@ -23,13 +23,7 @@
     <a href="index.html">Logout</a>
   </div>
 
-
-
   <!-- Use any element to open the sidenav -->
-
-
-
-
 
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
@@ -39,24 +33,80 @@
 
   <H2> What would you like to do?</H2>
 
-<div class="test">
-        <a href="#">
-            <img src="../images/shipment_truck.png" style="width:150px; height:150px">
-            <h3>View Shipments</h3>
-        </a>
-            <a href="order.html">
-                <img src="../images/delivery.jpg" style="width:150px; height:150px">
-                <h3>Place an Order</h3>
-            </a>
-           
-                <a href="#">
-                    <img src="../images/shipments.jpg" style="width:150px; height:150px">
-                    <h3>View Order history</h3>
-                </a>
-</div>
+  <div class="myWareHouse">
+    <div class="evenSpace">
+      <div class="warehouseFunction" href="#">
+        <img src="../images/shipment_truck.png" style="width:150px; height:150px">
+        <h3>View Shipments</h3>
+      </div>
+    </div>
+    <div class="evenSpace">
+      <div class="warehouseFunction" onclick="addProductWindow()">
+        <img src="../images/delivery.jpg" style="width:150px; height:150px">
+        <h3>Place an Order</h3>
+      </div>
+    </div>
+    <div class="evenSpace">
+      <div class="warehouseFunction" href="#">
+        <img src="../images/shipments.jpg" style="width:150px; height:150px">
+        <h3>View Order history</h3>
+      </div>
+    </div>
+  </div>
 
-
-<!-- 
+  <div id="myPlaceOrderPopup"  class="placeOrderPopup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <form action="warehouse.html">
+        <h1>Place an order</h1>
+        <h4>Type of Feedback<span>*</span></h4>
+        <select>
+          <option value=""></option>
+          <option value="">Enquiry</option>
+          <option value="2">Complaint</option>
+          <option value="3">Compliment</option>
+          <option value="4">Suggestion</option>
+        </select>
+        <h4>Feedback/Enquiry on<span>*</span></h4>
+        <select>
+          <option value=""></option>
+          <option value="1">Credit and Debit Cards</option>
+          <option value="2">Deposit</option>
+          <option value="3">Housing and Renovation Loan</option>
+          <option value="4">iBanking</option>
+          <option value="5">Treasures</option>
+        </select>
+        <h4>Name<span>*</span></h4>
+        <div class="title-block">
+          <select>
+            <option value="title" selected>Title</option>
+            <option value="ms">Ms</option>
+            <option value="miss">Miss</option>
+            <option value="mrs">Mrs</option>
+            <option value="mr">Mr</option>
+          </select>
+          <input class="name" type="text" name="name" placeholder="First" />
+          <input class="name" type="text" name="name" placeholder="Last" />
+        </div>
+        <h4>Email Address<span>*</span></h4>
+        <input type="text" name="name" />
+        <h4>Contact Number<span>*</span></h4>
+        <input type="text" name="name" />
+        <h4>Name of Staff who served me</h4>
+        <input type="text" name="name" />
+        <h4>Branch visited</h4>
+        <input type="text" name="name" />
+        <h4>Feedback/Enquiry</h4>
+        <p class="small">Please do not indicate your account or credit card number and banking instruction in your
+          comments. Thank you for your time and valuable feedback.</small>
+          <textarea rows="5"></textarea>
+        <div class="btn-block">
+          <button type="submit" href="warehouse.html">Send Feedback</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- 
 <div id="wrapper">
   <input type="button" class="button" value="View current shipments">
   <img src="../images/shipment_truck.png" align="left" style="width:100px;height:100px" />
@@ -73,9 +123,9 @@
 </div>
 
   -->
-  
 
- 
+
+
 
 
 </body>
