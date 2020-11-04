@@ -74,11 +74,11 @@
 
 /* Popup Content */
 .popup-content {
-  background-color: var(--form-bg-color);
+  background-color: var(--popup-bg-color);
   margin: auto;
   padding: 20px;
   border: 1px solid var(--black-color);
-  width: 50%;
+  width: 30%;
 }
 
 /* The Close Button */

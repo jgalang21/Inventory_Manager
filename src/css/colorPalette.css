@@ -1,6 +1,6 @@
 :root {
     --login-bg-color: #daf8e4;
-    --form-bg-color: #7ee8f8;
+    --popup-bg-color: #7ee8f8;
     --main-bg-color: #97ebdb;
     --mainFaded-bg-color: rgba(0,0,0,0.4); /* add opacity */
     --table-bg-color: #00c2c7;

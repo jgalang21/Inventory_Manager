@@ -75,7 +75,7 @@
 
 /* Popup Content */
 .popup-content {
-  background-color: var(--main-bg-color);
+  background-color: var(--popup-bg-color);
   margin: auto;
   padding: 20px;
   border: 1px solid var(--black-color);
