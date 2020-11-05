@@ -78,7 +78,15 @@
   margin: auto;
   padding: 20px;
   border: 1px solid var(--black-color);
-  width: 30%;
+  width: 20%;
+}
+
+.placeOrderPopup .btn-block {
+  padding: 22px 0px;
+}
+
+.placeOrderPopup .orderInput {
+  border-radius: 5px;
 }
 
 /* The Close Button */
