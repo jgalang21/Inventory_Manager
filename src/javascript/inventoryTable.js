@@ -2,6 +2,15 @@
 
 
 class product {
+  productName;
+  quantity;
+  costPerItem;
+  weightPerItem;
+  productType;
+  brand;
+  productID;
+  location;
+
   constructor(productName, quantity, costPerItem, weightPerItem,
     productType, brand, productID, location) {
     this.productName = productName;
@@ -85,6 +94,29 @@ function checkIfEmpty() {
 
 }
 
+window.onload = function loadInventoryTable() {
+
+  // HERE IS THE "GET REQUEST", it gives a listing of all the products in the data object
+  // in the database AFTER you add an item in the CHROME browser console
+  axios.get("http://localhost:8080/getProducts")
+    .then(function (resp) {
+      console.log(resp.data);
+      processProducts(resp.data);
+    }).catch(error => console.error(error));;
+
+}
+
+function processProducts(data) {
+  var products = data;
+
+  products.data.forEach(element => {
+    var newProd = new product(element.pname, element.quantity, element.cost,
+      element.weight, element.type, element.brand, element.pid, element.location);
+    addRow(newProd);
+  });
+
+}
+
 function addProductWindow() {
   // Get the popup
   var popup = document.getElementById("myAddProductPopup");
@@ -107,20 +139,6 @@ function addProductWindow() {
     axios.post("http://localhost:8080/addProduct",
       newProduct
     ).then(console.log('Product added.')).catch(error => console.error(error));
-
-
-    // HERE IS THE "GET REQUEST", if you uncomment this, you will get a listing of all the products in the data object
-    // in the database AFTER you add an item in the CHROME browser console,
-    // i just put it here for testing but put it where you see appropriate
-
-    //note that two fields are null for some reason
-
-
-    //   axios.get("http://localhost:8080/getProducts")
-    //   .then(resp => {
-    //     console.log(resp.data);
-    // }).catch(error => console.error(error));
-
 
     if (!checkIfEmpty()) {
       addRow(newProduct);
