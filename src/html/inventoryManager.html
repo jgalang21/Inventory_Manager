@@ -53,7 +53,7 @@
           <th onclick="sortInventory(7, false)">Location</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody onclick="editItem()">
       </tbody>
     </table>
   </div>
@@ -72,7 +72,7 @@
         <div class="prodInfo">
           <div>Quantity</div>
           <input type="number" class="prodInfoInput" id="popupQuantity" max="100000">
-        </div> 
+        </div>
         <div class="prodInfo">
           <div>Cost Per Item ($)</div>
           <input type="number" class="prodInfoInput" id="popupCostPerItem" max="9999999">
@@ -117,6 +117,52 @@
       </div>
       <div class="popupBtn">
         <input type="button" id="rmvProdPopupBtn" value="Remove Product">
+      </div>
+    </div>
+  </div>
+
+  <!-- The Edit Product Popup -->
+  <div id="myEditProductPopup" class="inventoryPopup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h1>Edit Product Information</h1>
+
+      <div class="popupProd">
+        <div class="prodInfo">
+          <div>Product Name</div>
+          <input type="text" class="prodInfoInput" id="addPopPrdName" maxlength="20">
+        </div>
+        <div class="prodInfo">
+          <div>Quantity</div>
+          <input type="number" class="prodInfoInput" id="popupQuantity" max="100000">
+        </div>
+        <div class="prodInfo">
+          <div>Cost Per Item ($)</div>
+          <input type="number" class="prodInfoInput" id="popupCostPerItem" max="9999999">
+        </div>
+        <div class="prodInfo">
+          <div>Weight Per Item (lb)</div>
+          <input type="number" class="prodInfoInput" id="popupWeightPerItem" max="9999999">
+        </div>
+        <div class="prodInfo">
+          <div>Product Type</div>
+          <input type="text" class="prodInfoInput" id="popupProductType" maxlength="20">
+        </div>
+        <div class="prodInfo">
+          <div>Brand</div>
+          <input type="text" class="prodInfoInput" id="popupBrand"  maxlength="20">
+        </div>
+        <div class="prodInfo">
+          <div>Product ID</div>
+          <input type="number" class="prodInfoInput" id="popupProductID" max="999999999">
+        </div>
+        <div class="prodInfo">
+          <div>Location</div>
+          <input type="text" class="prodInfoInput" id="popupLocation" maxlength="20">
+        </div>
+        <div class="popupBtn">
+          <input type="button" id="editProdPopupBtn" value="Edit Product">
+        </div>
       </div>
     </div>
   </div>

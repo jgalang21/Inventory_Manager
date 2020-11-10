@@ -282,3 +282,59 @@ function sortInventory(n, isNum) {
     }
   }
 }
+
+function editItem(product) {
+  var table = document.getElementById('myInventoryTable').getElementsByTagName('tbody')[0];
+  var rindex = 0;
+  var cindex = 0;
+
+  for(var i = 0; i < table.rows.length; i++)
+  {
+      for(var j = 0; j < table.rows[i].cells.length; j++)
+      {
+        table.rows[i].cells[j].onclick = function()
+        {
+          rindex = this.parentElement.rowIndex;
+          cindex = this.cellIndex;
+        }
+      }
+
+  }
+
+  var popup = document.getElementById("myEditProductPopup");
+  popup.style.display = "block";
+
+  var editProdPopupBtn = popup.getElementsByClassName("popupBtn")[0];
+  editProdPopupBtn.onclick = function () {
+
+    var newText1 = document.createTextNode(document.getElementById("addPopPrdName").value);
+    var newText2 = document.createTextNode(document.getElementById("popupQuantity").value);
+    var newText3 = document.createTextNode(document.getElementById("popupCostPerItem").value);
+    var newText4 = document.createTextNode(document.getElementById("popupWeightPerItem").value);
+    var newText5 = document.createTextNode(document.getElementById("popupProductType").value);
+    var newText6 = document.createTextNode(document.getElementById("popupBrand").value);
+    var newText7 = document.createTextNode(document.getElementById("popupProductID").value);
+    var newText8 = document.createTextNode(document.getElementById("popupLocation").value);
+
+    table.rows[rindex].cells[0].appendChild(newText1);
+    table.rows[rindex].cells[1].appendChild(newText2);
+    table.rows[rindex].cells[2].appendChild(newText3);
+    table.rows[rindex].cells[3].appendChild(newText4);
+    table.rows[rindex].cells[4].appendChild(newText5);
+    table.rows[rindex].cells[5].appendChild(newText6);
+    table.rows[rindex].cells[6].appendChild(newText7);
+    table.rows[rindex].cells[7].appendChild(newText8);
+
+  }
+
+  // Get the <span> element that closes the popup
+  var spanClose = popup.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the popup
+  spanClose.onclick = function () {
+    popup.style.display = "none";
+  }
+
+
+
+}
