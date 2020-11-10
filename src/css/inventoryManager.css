@@ -33,6 +33,11 @@
   width: 12.5%;
 }
 
+#myInventoryTable td:hover {
+  background-color: var(--td-hover-color);
+  cursor: pointer;
+}
+
 #tableBtns {
   width: 100%;
   text-align: center;
