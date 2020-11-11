@@ -47,59 +47,59 @@
       </div>
     </div>
     <div class="evenSpace">
-      <div class="warehouseFunction" href="#">
+      <div class="warehouseFunction"  onclick="viewOrdersWindow()">
         <img src="../images/shipments.jpg" style="width:150px; height:150px">
         <h3>View Order history</h3>
       </div>
     </div>
   </div>
 
-  <div id="myPlaceOrderPopup"  class="placeOrderPopup">
+  <div id="myPlaceOrderPopup" class="placeOrderPopup">
     <div class="popup-content">
       <span class="close">&times;</span>
-      <form action="warehouse.html">
+      <form>
         <h1>Place an order</h1>
         <h4>Product Name<span>*</span></h4>
-        <input type="text" class="orderInput" />
+        <input type="text" class="orderInput" id="popPrdName" />
         <h4>Quantity<span>*</span></h4>
-        <input type="text" class="orderInput" />
-        <h4>User Name<span>*</span></h4>
+        <input type="number" class="orderInput" id="popQuant" />
+        <h4>User's Name<span>*</span></h4>
         <div class="title-block">
-          <input class="orderInput" type="text" name="name" placeholder="First" />
-          <input class="orderInput" type="text" name="name" placeholder="Last" />
+          <input class="orderInput" type="text" name="name" placeholder="First" id="popFirst" />
+          <input class="orderInput" type="text" name="name" placeholder="Last" id="popLast" />
         </div>
         <h4>Email Address<span>*</span></h4>
-        <input type="text" name="name" class="orderInput" />
+        <input type="text" name="name" class="orderInput" id="popEmail" />
         <h4>Contact Number<span>*</span></h4>
-        <input type="text" name="name" class="orderInput" />
+        <input type="number" name="name" class="orderInput" id="popPhone" />
         <h4>Other Shipping Comments</h4>
-        <textarea rows="5" class="orderInput"></textarea>
+        <textarea rows="5" class="orderInput" id="popComments"></textarea>
         <div class="btn-block">
-          <button type="submit" href="warehouse.html">Place Order</button>
+          <input type="button" value="Place Order" />
         </div>
       </form>
     </div>
   </div>
-  <!-- 
-<div id="wrapper">
-  <input type="button" class="button" value="View current shipments">
-  <img src="../images/shipment_truck.png" align="left" style="width:100px;height:100px" />
-</div>
 
-<div id="wrapper">
-    <input type="button" class="button" value="Place an order">
-  <img src="../images/shipment_truck.png" align="left" style="width:100px;height:100px" />
-</div>
-
-<div id="wrapper">
-    <input type="button" class="button" value="View order history">
-  <img src="../images/shipment_truck.png" align="left" style="width:100px;height:100px" />
-</div>
-
-  -->
-
-
-
+  <div id="myViewOrderPopup" class="viewOrderPopup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h1>View Order History</h1>
+      <table id="myOrderTable" class="orderTable">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Order Status</th>
+            <th>Tracking Number</th>
+            <th>Delivery Time</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 
 </body>
