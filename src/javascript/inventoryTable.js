@@ -1,6 +1,5 @@
 
 
-
 class product {
   productName;
   quantity;
@@ -202,6 +201,14 @@ function removeRow(prod) {
   for (var i = 0; i < inventoryTable.rows.length; i++) {
     if (inventoryTable.rows[i].getElementsByTagName('td')[0].innerText == prod) {
       prodFound = true;
+      
+      console.log(prod);
+      
+      axios.post("http://localhost:8080/deleteProduct",
+      prod
+    ).then(console.log('Product deleted.')).catch(error => console.error(error));
+      
+      
       inventoryTable.deleteRow(i);
       document.getElementById("rmvPopPrdName").value = '';
       break;
