@@ -124,7 +124,8 @@
 h1 {
     font-family: 'Alatsi';
     font-size: 30px;
-   	text-align:center;
+     text-align:center;
+     font: bold;
 }
 h2 {
     font-family: 'Alatsi';
