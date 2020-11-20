@@ -28,7 +28,7 @@ async function login_test1() {
     assert.equal(check, 'file:///Users/Jeremy/Desktop/g47/src/html/inventoryManager.html'); 
 }
 
-//this test should fail since we have the wrong login
+//this test should not login since we have the wrong login, checks the right page we're on
 async function login_test2() {
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get(pathLoginPage);
