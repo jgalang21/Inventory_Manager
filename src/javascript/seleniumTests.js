@@ -10,6 +10,8 @@ const pathLoginPage="file:////Users/Jeremy/Desktop/g47/src/html/index.html"; //c
 //note that multiple instances of chrome will be opened (and probably eat your RAM too), so comment out once function at a time if you want
 
 //Open google and search for Selenium 
+
+//should pass because its the right login
 async function login_test1() {
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get(pathLoginPage);
@@ -25,6 +27,8 @@ async function login_test1() {
     console.log(check); //you need 3 seconds because it takes a few seconds before moving to the next page on login
     assert.equal(check, 'file:///Users/Jeremy/Desktop/g47/src/html/inventoryManager.html'); 
 }
+
+//this test should fail since we have the wrong login
 async function login_test2() {
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get(pathLoginPage);
@@ -40,6 +44,8 @@ async function login_test2() {
     console.log(check);
     assert.equal(check, 'file:///Users/Jeremy/Desktop/g47/src/html/index.html'); 
 }
+
+//add a product to the database
 async function add_product() {
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get(pathLoginPage);
@@ -52,17 +58,17 @@ async function add_product() {
 
     await driver.sleep(4000);
 
-    await (await driver.findElement(By.id("addProductBtn"))).click();
-    await driver.findElement(By.id("addPopPrdName")).sendKeys("Mouse");
+    await (await driver.findElement(By.id("addProductBtn"))).click(); //click on the add products button (notice the "By.id" part)
+    await driver.findElement(By.id("addPopPrdName")).sendKeys("Mouse"); //you base it off the naming conventions of the html fields here
     await driver.findElement(By.id("popupQuantity")).sendKeys(50);
-    await driver.findElement(By.id("popupCostPerItem")).sendKeys(5);
+    await driver.findElement(By.id("popupCostPerItem")).sendKeys(5); //be sure to specify integers vs strings and stuff here
     await driver.findElement(By.id("popupWeightPerItem")).sendKeys(1);
     await driver.findElement(By.id("popupProductType")).sendKeys("Hardware");
     await driver.findElement(By.id("popupBrand")).sendKeys("Dell");
     await driver.findElement(By.id("popupProductID")).sendKeys(25565); //if you know you know :)
     await driver.findElement(By.id("popupLocation")).sendKeys("Electronics"); 
 
-    await (await driver.findElement(By.id("addProdPopupBtn"))).click();
+    await (await driver.findElement(By.id("addProdPopupBtn"))).click(); //add the product
 
     await driver.sleep(500);
 
@@ -79,10 +85,10 @@ async function add_product() {
     await (await driver.findElement(By.id("addProdPopupBtn"))).click();
 
     //dont think an assert equals is really necessary here? can clearly see it works, and i dont know what values we'd "compare" here.
-    //it seems kinda odd to me to grab just one little element and do an assertequals when you can already see it there.
+    //it seems kinda odd to me to grab just one little element and do an assert equals when you can already see it there.
 
 }
 
 add_product();
- login_test1();
- login_test2();
+login_test1();
+login_test2();
