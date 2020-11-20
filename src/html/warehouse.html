@@ -17,7 +17,7 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="inventoryManager.html">Home</a>
-    <a href="warehouse.html">Warehouse</a>
+    <a href="warehouse.html" id="warehouseNav">Warehouse</a>
     <a href="#">Finances</a>
     <a href="#">Contact</a>
     <a href="index.html">Logout</a>
@@ -25,7 +25,7 @@
 
   <!-- Use any element to open the sidenav -->
 
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <span id="sideNavSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
   <h1>
     Warehouse
@@ -41,13 +41,13 @@
       </div>
     </div>
     <div class="evenSpace">
-      <div class="warehouseFunction" onclick="addProductWindow()">
+      <div class="warehouseFunction" id="placeOrderFunction" onclick="addProductWindow()">
         <img src="../images/delivery.jpg" style="width:150px; height:150px">
         <h3>Place an Order</h3>
       </div>
     </div>
     <div class="evenSpace">
-      <div class="warehouseFunction"  onclick="viewOrdersWindow()">
+      <div class="warehouseFunction" id="viewOrderFunction" onclick="viewOrdersWindow()">
         <img src="../images/shipments.jpg" style="width:150px; height:150px">
         <h3>View Order history</h3>
       </div>
@@ -75,7 +75,7 @@
         <h4>Other Shipping Comments</h4>
         <textarea rows="5" class="orderInput" id="popComments"></textarea>
         <div class="btn-block">
-          <input type="button" value="Place Order" />
+          <input type="button" id="placeOrderBtn" value="Place Order" />
         </div>
       </form>
     </div>
