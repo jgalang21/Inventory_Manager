@@ -1,6 +1,6 @@
 # Inventory Manager System
 
-This is a simple inventory manager system that uses JavaScript, HTML, CSS and NodeJS. 
+This is a simple inventory manager system that uses JavaScript, HTML, CSS and NodeJS. This project was for our Software Interfaces course. 
 
 # How to run
 
