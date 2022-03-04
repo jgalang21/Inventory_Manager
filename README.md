@@ -3,6 +3,7 @@
 This is a simple inventory manager system that uses JavaScript, HTML, CSS and NodeJS. This project was for our Software Interfaces course. 
 
 Technologies used:
+* JavaScript - Frontend
 * Selenium Web Driver - Testing
 * Express - Framework for Node JS to add/update/delete products
 * MySQL - Backend
